@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <!-- Include your CSS and JavaScript libraries -->
+    <link rel="stylesheet" href="{% static 'mainpage.css' %}">
+    <script src="{% static 'js/mainpage.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <!-- User's information (name, profile picture, etc.) -->
+            <h2>User Information</h2>
+            <p>Username: JohnDoe</p>
+            <!-- Add more user details as required -->
+        </div>
+
+        <div class="center-column">
+            <div class="post-section">
+                <h2>Write Your Post</h2>
+                <form method="post" action="{% url 'mainpage' %}">
+                    {% csrf_token %}
+                    <textarea name="user_post_content" rows="4" cols="50" placeholder="Write your post..."></textarea>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+
+            <div class="all-posts">
+                <h2>All Posts from Users</h2>
+                {% for post in posts %}
+                    <div class="post">
+                        <p>{{ post.content }}</p>
+                        <p>{{ post.created_at }}</p>
+                        <!-- Add more post details as needed -->
+                        <button class="like-button">Like</button>
+                        <button class="comment-button">Comment</button>
+                        <button class="share-button">Share</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="right-column">
+            <!-- Sidebar or additional content -->
+            <h2>ConnectAI News</h2>
+            <p>Stay updated with AI-related news!</p>
+        </div>
+    </div>
+</body>
+</html>

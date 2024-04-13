@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Details</title>
+    <link rel="stylesheet" href="{% static 'fill_details.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Fill Your Details</h2>
+        <form id="profileForm" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+
+            <label for="resume">Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            
+            <label for="domainArea">Domain Area:</label>
+            <input type="text" id="domainArea" name="domainArea" required placeholder="e.g., Frontend, Backend, Developer">
+
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" name="skills" required placeholder="e.g., Python, Django, ...">
+
+
+            <label for="profession">Profession:</label>
+            <select id="profession" name="profession" required>
+                <option value="">Select Profession</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="researcher">Researcher</option>
+            </select>
+
+            <button type="submit">Create Profile</button>
+        </form>
+        <form action="{% url 'signout' %}" method="post">
+            {% csrf_token %}
+            <button class="signout-button" type="submit">Sign Out</button>
+        </form>
+    </div>
+</body>
+</html>

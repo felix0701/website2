@@ -1,0 +1,80 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Add relative positioning */
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* styles.css */
+
+/* Existing CSS styles */
+
+form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr; /* Use grid layout with two columns */
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+input[type="file"] {
+  width: calc(100% - 20px); /* Subtract 20px to account for padding and border */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #010204;
+}
+
+.signout-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Additional styles for dropdown */
+select {
+  width: calc(100% - 22px); /* Subtract 22px to account for padding, border, and dropdown arrow */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><polygon points="0,0 8,0 4,6.8"/></svg>'); /* Add custom dropdown arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px 12px;
+}

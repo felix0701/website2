@@ -1,0 +1,58 @@
+/* mainpage.css */
+
+/* Apply basic styles to the container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+/* Style the left column */
+.left-column {
+    flex: 1;
+    background-color: #0b0909; /* Primary color */
+    padding: 10px;
+    margin-right: 10px; /* Reduced space between left and center columns */
+    color: #0ea7ee; /* Secondary color for text content */
+}
+
+/* Style the center column */
+.center-column {
+    flex: 2;
+    background-color: #0ea7ee; /* Secondary color */
+    padding: 10px; /* Adjusted padding */
+    margin: 0 10px; /* Reduced space between center and right columns */
+}
+
+/* Style the right column */
+.right-column {
+    flex: 1;
+    background-color: #0b0909; /* Primary color */
+    padding: 10px;
+    margin-left: 10px; /* Reduced space between right and center columns */
+    color: #0ea7ee; /* Secondary color for text content */
+}
+
+/* Style the post section */
+.post-section {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding:15px;
+}
+
+.post-section textarea {
+    width: calc(100% - 50px); /* Adjusted textarea width */
+    height: 100px;
+    resize: vertical;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Added border radius for rounded corners */
+}
+
+.post-section button {
+    padding: 10px 20px;
+    background-color: #008cba; /* Button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}

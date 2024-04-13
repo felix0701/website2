@@ -1,0 +1,137 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #000, #670975);
+    margin: 0;
+}
+
+/* Login container styles */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.6); /* Slightly less transparent background */
+    border: 2px solid #ddd; /* Slightly thicker border */
+    border-radius: 10px; /* Increased border radius for a rounded look */
+    padding: 30px; /* Slightly reduced padding */
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Increased box shadow */
+    width: 300px; /* Medium-sized container */
+}
+
+/* Header styles */
+h1 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input container styles */
+.input-container {
+    margin: 10px 0;
+    text-align: left;
+    padding-right: 20px;
+    
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input styles */
+input {
+    width: 100%;
+    padding: 10px; /* Slightly reduced padding */
+    border: 2px solid #ddd; /* Slightly thicker border */
+    border-radius: 5px; /* Border radius back to 5px for input fields */
+    font-size: 16px;
+}
+
+/* Login button styles */
+button {
+    height: 40px; /* Reduced button height */
+    width: 100%;
+    padding: 10px; /* Slightly reduced padding */
+    background-color: #03172d;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Border radius back to 5px for the button */
+    font-size: 18px; /* Reduced font size */
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #1d0624;
+}
+
+/* "OR" text styles */
+.or-text {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #777;
+}
+
+/* Login with Google button styles */
+.login-with-google-button {
+    width: 100%;
+    padding: 12px; /* Increase padding for larger buttons */
+    background-color: #03172d; /* Match Login button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Increase border radius for a rounded look */
+    font-size: 20px; /* Increase font size for larger buttons */
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+.login-with-google-button:hover {
+    background-color: #1d0624; /* Slightly darker blue on hover */
+}
+
+/* ReCAPTCHA container styles */
+.g-recaptcha {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+/* "Secure Login with reCAPTCHA" notice styles */
+.secure-login-notice {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Signup link styles */
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Signup link color */
+.signup-link a {
+    text-decoration: none;
+    color: #240624;
+}
+
+/* Styles for the "Don't have an account? Sign Up" box */
+
+
+.signup-link-box p {
+    font-weight: bold;
+    margin: 10px 0;
+}

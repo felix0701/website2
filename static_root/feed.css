@@ -1,0 +1,82 @@
+/* feed.css */
+/* Navbar styles */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* Example change for smaller screens */
+        /* Add any other adjustments needed for smaller screens */
+    }
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Set an appropriate background color for the body */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0909; /* Primary color */
+    color: #ffffff; /* Text color */
+    padding: 15px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #0ea7ee; /* Secondary color */
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.fa {
+    color: #0ea7ee; /* Secondary color for icons */
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Adjust the margin between the bell icon and "More" dropdown */
+.fa-bell {
+    margin-right: 15px; /* Add appropriate margin */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0b0909; /* Primary color for dropdown background */
+    color: #0ea7ee; /* Secondary color for dropdown text */
+    max-width: 200px; /* Example max width */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    overflow: auto; /* Add scrollbars if content overflows */
+    right: 0; /* Adjust position */
+    top: 100%; /* Position dropdown below the parent element */
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #0ea7ee; /* Secondary color for dropdown links */
+    display: block;
+    padding: 8px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

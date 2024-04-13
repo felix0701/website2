@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-x6d5vfrdenypyotrs9b/h5u7w3seqxpz1dodalac1klnam53lr2e7spf5ud31vp" crossorigin="anonymous">
+    <title>Login Page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="message-container">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="message alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <h1>Welcome Back</h1>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="input-container">
+                <label for="username">Email:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your email" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="show-password-icon"><i class="fas fa-eye"></i></span>
+                </div>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LealbMoAAAAAME17tKD1kbSbTMZm4iePE7IbXJj"></div>
+            <button type="submit">Login</button>
+        </form>
+        {% load socialaccount %}
+        <a href="{% provider_login_url 'google' %}">
+        <button type="button" class="login-with-google-button">
+            <i class="fab fa-google"></i> Login with Google
+        </button></a>
+        <div class="signup-link-box">
+            <p>Don't have an account? <a href="/signup"><u style="color:#670975">Sign Up</u></a></p>
+        </div>
+        <div class="secure-login-notice">
+            Secure Login with reCAPTCHA subject to
+            <a href="https://policies.google.com/terms?hl=en" target="_blank">Google Terms</a> and
+            <a href="https://policies.google.com/privacy?hl=en" target="_blank">Google Privacy Policy</a>
+        </div>
+    </div>
+</body>
+</html>
